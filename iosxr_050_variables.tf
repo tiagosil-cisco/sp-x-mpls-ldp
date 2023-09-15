@@ -201,7 +201,7 @@ variable "mpls_config" {
       ]
     },
     pe03 = {
-      device    = "pe01"
+      device    = "pe03"
       oam       = true
       router_id = "10.31.1.7"
       interfaces = [
