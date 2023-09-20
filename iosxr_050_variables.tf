@@ -1,7 +1,10 @@
 locals {
   project_title       = "SP-B"
   project_description = "Topology created using Terraform to represent SP-X"
+  routers             = jsondecode(file("${path.module}/sp-x-devices.json"))
+  mpls_config         = jsondecode(file("${path.module}/sp-x-mpls-config-variable.json"))
 
+  /*
   routers = [
     {
       name = "pe01"
@@ -52,11 +55,11 @@ locals {
       host = "10.0.1.62"
     },
   ]
-
+*/
   xr_username = "admin"
   xr_password = "C!sco123"
 }
-
+/*
 variable "mpls_config" {
   type = map(any)
   default = {
@@ -292,3 +295,4 @@ variable "mpls_config" {
     },
   }
 }
+*/
